@@ -1,5 +1,6 @@
 //Promise
-function delayP(ms) {
+//Producer
+function delayP(ms) {               //ms는 시간 (밀리 세컨드)
     return new Promise((resolve, reject) => { //resolve : 성공했을 때 실행되는 함수 //reject : 실패했을 때 실행되는 함수
         try {
         setTimeout(() => {
@@ -11,8 +12,10 @@ function delayP(ms) {
     })
 }
 
-//Consumer
+//Consumer 
 delayP(1000)
     .then((val) => {
+        console.log(val);
+    }).then((val) => {
         console.log(val);
     });
